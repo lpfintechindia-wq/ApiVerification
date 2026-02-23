@@ -65,15 +65,7 @@ export default function DeveloperLayout() {
 
         {/* Environment Selector */}
         {sidebarOpen && (
-          <div className="p-4 border-b border-[#e2e8f0]">
-            <label className="font-['Montserrat',sans-serif] text-[11px] text-[#64748b] mb-2 block uppercase tracking-wide font-medium">
-              Environment
-            </label>
-            <select className="font-['Montserrat',sans-serif] w-full bg-[#f8fafc] border border-[#e2e8f0] rounded-lg px-3 py-2 text-[13px] text-[#0f172a] focus:outline-none focus:border-[#A02724] focus:ring-2 focus:ring-[#A02724]/20">
-              <option>🟢 Sandbox</option>
-              <option>🔴 Production (Read-only)</option>
-            </select>
-          </div>
+          null
         )}
 
         {/* Navigation */}

@@ -157,7 +157,7 @@ export default function DeveloperOverview() {
       {/* Hero Section */}
       <div className="mb-6 lg:mb-8">
         <h1 className="font-['Montserrat',sans-serif] text-[24px] lg:text-[32px] font-bold text-[#0f172a] mb-2">
-          Welcome to Developer Portal
+          Welcome to API Verification Suite
         </h1>
         <p className="font-['Montserrat',sans-serif] text-[14px] lg:text-[16px] text-[#64748b]">
           Build, test, and integrate payment and verification APIs with ease

@@ -1,11 +1,12 @@
 import { Outlet, useLocation, useNavigate } from "react-router";
 import svgPaths from "@/imports/svg-tq7lxjg182";
 import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 function Frame() {
   return (
-    <div className="-translate-x-1/2 absolute bg-[#3b5ba3] h-[40px] left-1/2 overflow-clip rounded-[8px] top-[46px] w-[116px]">
-      <p className="absolute font-['Outfit:Bold',sans-serif] font-bold leading-[normal] left-[calc(50%-30.5px)] text-[#fdfdfd] text-[16px] top-[calc(50%-10px)]">PAYTECH</p>
+    <div className="-translate-x-1/2 absolute bg-[#A02724] h-[40px] left-1/2 overflow-clip rounded-[8px] top-[46px] w-[116px] shadow-md">
+      <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[normal] left-[calc(50%-30.5px)] text-white text-[16px] top-[calc(50%-10px)]">PAYTECH</p>
     </div>
   );
 }
@@ -16,7 +17,7 @@ function House() {
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 20 20">
         <g clipPath="url(#clip0_2_1628)" id="House">
           <g id="Vector" />
-          <path d={svgPaths.p38b11f00} fill="var(--fill-0, #1C1E21)" id="Vector_2" />
+          <path d={svgPaths.p38b11f00} fill="currentColor" id="Vector_2" />
         </g>
         <defs>
           <clipPath id="clip0_2_1628">
@@ -32,14 +33,14 @@ function DashboardTab({ isActive, onClick }: { isActive: boolean; onClick: () =>
   return (
     <div 
       onClick={onClick}
-      className={`content-stretch flex gap-[12px] items-center px-[24px] py-[12px] relative shrink-0 w-[240px] cursor-pointer hover:bg-[#f0f4fa] ${
-        isActive ? "bg-[#e9effb]" : ""
+      className={`content-stretch flex gap-[12px] items-center px-[24px] py-[12px] relative shrink-0 w-full cursor-pointer transition-all ${
+        isActive ? "bg-[#A02724] text-white" : "text-[#94A3B8] hover:bg-[#1E293B] hover:text-white"
       }`} 
       data-name="Dashboard tab"
     >
-      {isActive && <div aria-hidden="true" className="absolute border-[#91a7e5] border-l-4 border-solid inset-0 pointer-events-none" />}
+      {isActive && <div aria-hidden="true" className="absolute border-white border-l-4 border-solid inset-0 pointer-events-none" />}
       <House />
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#1c1e21] text-[14px]">Dashboard</p>
+      <p className="font-['Montserrat',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[14px]">Dashboard</p>
     </div>
   );
 }
@@ -50,7 +51,7 @@ function Users() {
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 20 20">
         <g clipPath="url(#clip0_2_1679)" id="Users">
           <g id="Vector" />
-          <path d={svgPaths.p17952800} fill="var(--fill-0, #4F5661)" id="Vector_2" />
+          <path d={svgPaths.p17952800} fill="currentColor" id="Vector_2" />
         </g>
         <defs>
           <clipPath id="clip0_2_1679">
@@ -67,7 +68,7 @@ function IconParkDown() {
     <div className="relative shrink-0 size-[24px]" data-name="icon-park:down">
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 24 24">
         <g id="icon-park:down">
-          <path d="M18 9L12 15L6 9" id="Vector" stroke="var(--stroke-0, #4F5661)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+          <path d="M18 9L12 15L6 9" id="Vector" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
         </g>
       </svg>
     </div>
@@ -76,12 +77,12 @@ function IconParkDown() {
 
 function UserTab() {
   return (
-    <div className="h-[48px] relative shrink-0 w-full cursor-pointer hover:bg-[#f0f4fa]" data-name="User tab">
+    <div className="h-[48px] relative shrink-0 w-full cursor-pointer hover:bg-[#1E293B] text-[#94A3B8] hover:text-white transition-all" data-name="User tab">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center justify-between px-[24px] py-[12px] relative size-full">
           <div className="content-stretch flex gap-[12px] items-center relative shrink-0">
             <Users />
-            <p className="font-['Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#4f5661] text-[14px]">User</p>
+            <p className="font-['Montserrat',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[14px]">User</p>
           </div>
           <IconParkDown />
         </div>
@@ -96,7 +97,7 @@ function PiggyBank() {
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 20 20">
         <g clipPath="url(#clip0_2_1672)" id="PiggyBank">
           <g id="Vector" />
-          <path d={svgPaths.p2e655440} fill="var(--fill-0, #4F5661)" id="Vector_2" />
+          <path d={svgPaths.p2e655440} fill="currentColor" id="Vector_2" />
         </g>
         <defs>
           <clipPath id="clip0_2_1672">
@@ -110,12 +111,12 @@ function PiggyBank() {
 
 function FundTab() {
   return (
-    <div className="h-[48px] relative shrink-0 w-full cursor-pointer hover:bg-[#f0f4fa]">
+    <div className="h-[48px] relative shrink-0 w-full cursor-pointer hover:bg-[#1E293B] text-[#94A3B8] hover:text-white transition-all">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center justify-between px-[24px] py-[12px] relative size-full">
           <div className="content-stretch flex gap-[12px] items-center relative shrink-0">
             <PiggyBank />
-            <p className="font-['Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#4f5661] text-[14px]">Fund</p>
+            <p className="font-['Montserrat',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[14px]">Fund</p>
           </div>
           <IconParkDown />
         </div>
@@ -130,7 +131,7 @@ function ChartBar() {
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 20 20">
         <g clipPath="url(#clip0_2_1661)" id="ChartBar">
           <g id="Vector" />
-          <path d={svgPaths.pf616052} fill="var(--fill-0, #4F5661)" id="Vector_2" />
+          <path d={svgPaths.pf616052} fill="currentColor" id="Vector_2" />
         </g>
         <defs>
           <clipPath id="clip0_2_1661">
@@ -144,12 +145,12 @@ function ChartBar() {
 
 function ReportsTab() {
   return (
-    <div className="h-[48px] relative shrink-0 w-full cursor-pointer hover:bg-[#f0f4fa]">
+    <div className="h-[48px] relative shrink-0 w-full cursor-pointer hover:bg-[#1E293B] text-[#94A3B8] hover:text-white transition-all">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center px-[24px] py-[12px] relative size-full">
           <div className="content-stretch flex gap-[12px] items-center relative shrink-0">
             <ChartBar />
-            <p className="font-['Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#4f5661] text-[14px]">Reports</p>
+            <p className="font-['Montserrat',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[14px]">Reports</p>
           </div>
         </div>
       </div>
@@ -163,7 +164,7 @@ function GearSix() {
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 20 20">
         <g clipPath="url(#clip0_2_1650)" id="GearSix">
           <g id="Vector" />
-          <path d={svgPaths.p2ba43880} fill="var(--fill-0, #4F5661)" id="Vector_2" />
+          <path d={svgPaths.p2ba43880} fill="currentColor" id="Vector_2" />
         </g>
         <defs>
           <clipPath id="clip0_2_1650">
@@ -177,12 +178,12 @@ function GearSix() {
 
 function SettingTab() {
   return (
-    <div className="h-[48px] relative shrink-0 w-full cursor-pointer hover:bg-[#f0f4fa]" data-name="User tab">
+    <div className="h-[48px] relative shrink-0 w-full cursor-pointer hover:bg-[#1E293B] text-[#94A3B8] hover:text-white transition-all" data-name="User tab">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center justify-between px-[24px] py-[12px] relative size-full">
           <div className="content-stretch flex gap-[12px] items-center relative shrink-0">
             <GearSix />
-            <p className="font-['Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#4f5661] text-[14px]">Setting</p>
+            <p className="font-['Montserrat',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[14px]">Setting</p>
           </div>
           <IconParkDown />
         </div>
@@ -196,7 +197,7 @@ function CodeIcon() {
     <div className="relative shrink-0 size-[20px]">
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 20 20">
         <g>
-          <path d={svgPaths.p3a23d800} fill="var(--fill-0, #4F5661)" />
+          <path d={svgPaths.p3a23d800} fill="currentColor" />
         </g>
       </svg>
     </div>
@@ -209,8 +210,8 @@ function DeveloperToolsTab({ activeRoute, onNavigate }: { activeRoute: string; o
   return (
     <div className="relative shrink-0 w-full">
       <div 
-        className={`h-[48px] relative shrink-0 w-full cursor-pointer hover:bg-[#f0f4fa] ${
-          isActive ? "bg-[#f0f4fa]" : ""
+        className={`h-[48px] relative shrink-0 w-full cursor-pointer transition-all ${
+          isActive ? "bg-[#A02724] text-white" : "text-[#94A3B8] hover:bg-[#1E293B] hover:text-white"
         }`}
         onClick={() => onNavigate("/developer")}
       >
@@ -218,7 +219,7 @@ function DeveloperToolsTab({ activeRoute, onNavigate }: { activeRoute: string; o
           <div className="content-stretch flex items-center justify-between px-[24px] py-[12px] relative size-full">
             <div className="content-stretch flex gap-[12px] items-center relative shrink-0">
               <CodeIcon />
-              <p className="font-['Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#4f5661] text-[14px]">Developer Tools</p>
+              <p className="font-['Montserrat',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[14px]">Developer Tools</p>
             </div>
           </div>
         </div>
@@ -233,7 +234,7 @@ function User() {
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 20 20">
         <g clipPath="url(#clip0_2_1654)" id="User">
           <g id="Vector" />
-          <path d={svgPaths.pe9f2500} fill="var(--fill-0, #4F5661)" id="Vector_2" />
+          <path d={svgPaths.pe9f2500} fill="currentColor" id="Vector_2" />
         </g>
         <defs>
           <clipPath id="clip0_2_1654">
@@ -247,22 +248,37 @@ function User() {
 
 function Profile() {
   return (
-    <div className="content-stretch flex gap-[12px] items-center px-[24px] py-[12px] relative shrink-0 w-[240px] cursor-pointer hover:bg-[#f0f4fa]" data-name="Profile">
+    <div className="content-stretch flex gap-[12px] items-center px-[24px] py-[12px] relative shrink-0 w-full cursor-pointer hover:bg-[#1E293B] text-[#94A3B8] hover:text-white transition-all" data-name="Profile">
       <User />
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[normal] not-italic relative shrink-0 text-[#4f5661] text-[14px]">Profile</p>
+      <p className="font-['Montserrat',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[14px]">Profile</p>
     </div>
   );
 }
 
-function LeftNavBar({ activeRoute, onNavigate }: { activeRoute: string; onNavigate: (path: string) => void }) {
+function LeftNavBar({ activeRoute, onNavigate, onClose }: { activeRoute: string; onNavigate: (path: string) => void; onClose?: () => void }) {
+  const handleNavigate = (path: string) => {
+    onNavigate(path);
+    onClose?.();
+  };
+
   return (
-    <div className="bg-[#fdfdfd] h-full relative shrink-0 w-[240px]" data-name="Left nav bar">
+    <div className="bg-[#0F172A] h-full relative w-full lg:w-[240px]" data-name="Left nav bar">
       <div className="overflow-clip relative rounded-[inherit] size-full">
         <Frame />
-        <div className="absolute content-stretch flex flex-col gap-[4px] items-start left-0 top-[144px] w-[240px]" data-name="Left Nav bar">
+        
+        {/* Close button for mobile */}
+        <button
+          onClick={onClose}
+          className="lg:hidden absolute top-4 right-4 text-white hover:text-gray-300 z-50"
+          aria-label="Close menu"
+        >
+          <X className="size-6" />
+        </button>
+
+        <div className="absolute content-stretch flex flex-col gap-[4px] items-start left-0 top-[144px] w-full" data-name="Left Nav bar">
           <DashboardTab 
             isActive={activeRoute === "/"} 
-            onClick={() => onNavigate("/")} 
+            onClick={() => handleNavigate("/")} 
           />
           <UserTab />
           <FundTab />
@@ -270,12 +286,12 @@ function LeftNavBar({ activeRoute, onNavigate }: { activeRoute: string; onNaviga
           <SettingTab />
           <DeveloperToolsTab 
             activeRoute={activeRoute}
-            onNavigate={onNavigate}
+            onNavigate={handleNavigate}
           />
           <Profile />
         </div>
       </div>
-      <div aria-hidden="true" className="absolute border border-[#eceff3] border-solid inset-0 pointer-events-none" />
+      <div aria-hidden="true" className="absolute border border-[#334155] border-solid inset-0 pointer-events-none" />
     </div>
   );
 }
@@ -285,8 +301,8 @@ function Search1() {
     <div className="relative shrink-0 size-[15.273px]" data-name="search">
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15.2727 15.2727">
         <g id="search">
-          <path d={svgPaths.p1a5e7700} id="Vector" stroke="var(--stroke-0, #3B5BA3)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.27273" />
-          <path d={svgPaths.p19baff6f} id="Vector_2" stroke="var(--stroke-0, #3B5BA3)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.27273" />
+          <path d={svgPaths.p1a5e7700} id="Vector" stroke="var(--stroke-0, #A02724)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.27273" />
+          <path d={svgPaths.p19baff6f} id="Vector_2" stroke="var(--stroke-0, #A02724)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.27273" />
         </g>
       </svg>
     </div>
@@ -295,10 +311,10 @@ function Search1() {
 
 function Search() {
   return (
-    <div className="bg-[#f6f9fc] h-[40px] relative rounded-[12px] shrink-0 w-[280px]" data-name="Search">
+    <div className="bg-[#f6f9fc] h-[40px] relative rounded-[12px] shrink-0 w-full max-w-[280px] hidden sm:block" data-name="Search">
       <div className="content-stretch flex gap-[16px] items-center overflow-clip pl-[16px] pr-[12px] relative rounded-[inherit] size-full">
         <div className="content-stretch flex flex-[1_0_0] items-center min-h-px min-w-px relative" data-name="Item">
-          <p className="font-['Lato:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#6f7987] text-[16px]">Search</p>
+          <p className="font-['Montserrat',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#6f7987] text-[14px]">Search</p>
         </div>
         <div className="content-stretch flex items-center p-[6.364px] relative shrink-0" data-name="Icon">
           <Search1 />
@@ -333,7 +349,7 @@ function OutlineGeneralSun() {
 
 function Group3() {
   return (
-    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid items-[start] justify-items-[start] leading-[0] relative shrink-0">
+    <div className="grid-cols-[max-content] grid-rows-[max-content] inline-grid items-[start] justify-items-[start] leading-[0] relative shrink-0 hidden sm:block">
       <div className="bg-[#f6f9fc] border-[#eceff3] border-[0.71px] border-solid col-1 h-[40px] ml-0 mt-0 rounded-[44px] row-1 w-[83.333px]" />
       <div className="bg-[#1c1e21] col-1 ml-[6.25px] mt-[5.42px] rounded-[42.6px] row-1 shadow-[0px_2.84px_2.84px_0px_rgba(0,0,0,0.25),7.1px_7.1px_14.2px_0px_#24272c] size-[29.167px]" />
       <OutlineGeneralSun />
@@ -342,26 +358,37 @@ function Group3() {
 }
 
 function Frame11() {
-  return <div className="bg-[#d4dff7] rounded-[40px] shrink-0 size-[40px]" />;
+  return <div className="bg-[#FEE2E2] rounded-[40px] shrink-0 size-[40px] hidden sm:block" />;
 }
 
-function TopNavBar({ title }: { title: string }) {
+function TopNavBar({ title, onMenuClick }: { title: string; onMenuClick: () => void }) {
   return (
-    <div className="bg-[#fdfdfd] flex-[1_0_0] h-[80px] min-h-px min-w-px sticky top-0" data-name="Top nav bar">
-      <div className="overflow-clip relative rounded-[inherit] w-full h-[60px]">
-        <div className="absolute content-stretch flex items-center justify-between left-[52px] right-[52px] top-[20px]">
-          <p className="font-['Outfit:Medium',sans-serif] font-medium leading-[normal] relative shrink-0 text-[#1c1e21] text-[24px]">{title}</p>
-          <div className="content-stretch flex gap-[32px] items-center relative shrink-0">
+    <div className="bg-white flex-[1_0_0] h-[64px] lg:h-[80px] min-h-px min-w-px sticky top-0 border-b border-[#E2E8F0] shadow-sm z-30" data-name="Top nav bar">
+      <div className="overflow-clip relative rounded-[inherit] w-full h-full px-4 lg:px-[52px]">
+        <div className="flex items-center justify-between h-full">
+          {/* Left side - Menu button + Title */}
+          <div className="flex items-center gap-3">
+            <button
+              onClick={onMenuClick}
+              className="lg:hidden text-[#0F172A] hover:text-[#A02724] transition-colors"
+              aria-label="Open menu"
+            >
+              <Menu className="size-6" />
+            </button>
+            <p className="font-['Montserrat',sans-serif] font-semibold leading-[normal] text-[#0F172A] text-[18px] lg:text-[24px]">{title}</p>
+          </div>
+
+          {/* Right side - Search, Theme toggle, Profile */}
+          <div className="content-stretch flex gap-3 lg:gap-[32px] items-center relative shrink-0">
             <Search />
             <Group3 />
             <div className="content-stretch flex gap-[12px] items-center relative shrink-0">
               <Frame11 />
-              <p className="font-['Inter:Medium',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#1c1e21] text-[14px]">Admin</p>
+              <p className="font-['Montserrat',sans-serif] font-medium leading-[normal] not-italic relative shrink-0 text-[#0F172A] text-[14px] hidden sm:block">Admin</p>
             </div>
           </div>
         </div>
       </div>
-      <div aria-hidden="true" className="absolute border border-[#eceff3] border-solid inset-0 pointer-events-none" />
     </div>
   );
 }
@@ -369,23 +396,53 @@ function TopNavBar({ title }: { title: string }) {
 export default function MainLayout() {
   const location = useLocation();
   const navigate = useNavigate();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   
   const getPageTitle = () => {
     const path = location.pathname;
     if (path === "/") return "Dashboard";
     if (path.startsWith("/api-testing")) return "API Testing";
     if (path.startsWith("/verification-apis")) return "Verification APIs";
+    if (path.startsWith("/developer")) return "Developer Tools";
     return "Dashboard";
   };
 
   return (
     <div className="flex h-screen w-full bg-[#f6f9fc]">
-      <LeftNavBar 
-        activeRoute={location.pathname} 
-        onNavigate={(path) => navigate(path)} 
-      />
+      {/* Desktop Sidebar */}
+      <div className="hidden lg:block">
+        <LeftNavBar 
+          activeRoute={location.pathname} 
+          onNavigate={(path) => navigate(path)} 
+        />
+      </div>
+
+      {/* Mobile Sidebar Overlay */}
+      {mobileMenuOpen && (
+        <>
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+            onClick={() => setMobileMenuOpen(false)}
+          />
+          
+          {/* Sidebar */}
+          <div className="fixed inset-y-0 left-0 w-[280px] z-50 lg:hidden">
+            <LeftNavBar 
+              activeRoute={location.pathname} 
+              onNavigate={(path) => navigate(path)}
+              onClose={() => setMobileMenuOpen(false)}
+            />
+          </div>
+        </>
+      )}
+
+      {/* Main Content */}
       <div className="flex-1 flex flex-col min-w-0">
-        <TopNavBar title={getPageTitle()} />
+        <TopNavBar 
+          title={getPageTitle()} 
+          onMenuClick={() => setMobileMenuOpen(true)}
+        />
         <div className="flex-1 overflow-auto bg-[#f6f9fc]">
           <Outlet />
         </div>

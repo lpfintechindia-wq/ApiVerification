@@ -12,8 +12,8 @@ export default function DeveloperOverview() {
       title: "Verification APIs",
       description: "Identity, document, and business verification",
       icon: Shield,
-      gradient: "from-[#8b5cf6] to-[#7c3aed]",
-      bgColor: "bg-[#f5f3ff]",
+      gradient: "from-[#4b1b91] to-[#170d3f]",
+      bgColor: "bg-[#f3e8ff]",
       path: "/verification-apis",
       stats: { total: "18 APIs", active: "10 Active" }
     },
@@ -21,8 +21,8 @@ export default function DeveloperOverview() {
       title: "Wallet Balance",
       description: "View balance and transaction history",
       icon: Wallet,
-      gradient: "from-[#A02724] to-[#8B1F1C]",
-      bgColor: "bg-[#FEE2E2]",
+      gradient: "from-[#4b1b91] to-[#170d3f]",
+      bgColor: "bg-[#f3e8ff]",
       path: "#wallet",
       stats: { total: "₹1,24,560", active: "Available" }
     },
@@ -30,8 +30,8 @@ export default function DeveloperOverview() {
       title: "API Logs",
       description: "View and analyze API request logs",
       icon: FileText,
-      gradient: "from-[#10b981] to-[#059669]",
-      bgColor: "bg-[#ecfdf5]",
+      gradient: "from-[#c07bfc] to-[#4b1b91]",
+      bgColor: "bg-[#faf5ff]",
       path: "/developer/transaction-logs",
       stats: { total: "2.5k Logs", active: "Today" }
     }
@@ -198,7 +198,7 @@ export default function DeveloperOverview() {
               <div
                 key={index}
                 onClick={() => handleQuickLinkClick(link.path)}
-                className="group bg-white border border-[#e2e8f0] rounded-xl p-5 lg:p-6 hover:shadow-lg hover:border-[#A02724] cursor-pointer transition-all relative overflow-hidden"
+                className="group bg-white border border-[#e2e8f0] rounded-xl p-5 lg:p-6 hover:shadow-lg hover:border-[#4b1b91] cursor-pointer transition-all relative overflow-hidden"
               >
                 {/* Gradient Background on Hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${link.gradient} opacity-0 group-hover:opacity-5 transition-opacity`}></div>
@@ -210,7 +210,7 @@ export default function DeveloperOverview() {
                         <Icon className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
                       </div>
                     </div>
-                    <ArrowRight className="w-5 h-5 text-[#cbd5e1] group-hover:text-[#A02724] group-hover:translate-x-1 transition-all" />
+                    <ArrowRight className="w-5 h-5 text-[#cbd5e1] group-hover:text-[#4b1b91] group-hover:translate-x-1 transition-all" />
                   </div>
 
                   <h3 className="font-['Montserrat',sans-serif] text-[16px] lg:text-[18px] font-semibold text-[#0f172a] mb-2">
@@ -237,7 +237,7 @@ export default function DeveloperOverview() {
         <div className="bg-white border border-[#e2e8f0] rounded-xl p-5 lg:p-6 shadow-sm">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-[#A02724] to-[#8B1F1C] rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-[#4b1b91] to-[#170d3f] rounded-lg flex items-center justify-center">
                 <Wallet className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
               </div>
               <div>
@@ -258,7 +258,7 @@ export default function DeveloperOverview() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6 mb-6">
             {/* Current Balance */}
-            <div className="bg-gradient-to-br from-[#A02724] to-[#8B1F1C] rounded-xl p-5 lg:p-6 text-white">
+            <div className="bg-gradient-to-br from-[#4b1b91] to-[#170d3f] rounded-xl p-5 lg:p-6 text-white">
               <p className="font-['Montserrat',sans-serif] text-[13px] lg:text-[14px] opacity-90 mb-2 text-[#ffffff]">Available Balance</p>
               <p className="font-['Montserrat',sans-serif] text-[28px] lg:text-[36px] font-bold mb-1 text-[#ffffff]">₹1,24,560</p>
               <p className="font-['Montserrat',sans-serif] text-[11px] lg:text-[12px] opacity-80 text-[#ffffff]">Last updated: Today, 2:30 PM</p>
@@ -519,7 +519,7 @@ export default function DeveloperOverview() {
             <h2 className="font-['Montserrat',sans-serif] text-[16px] lg:text-[18px] font-semibold text-[#0f172a]">Recent Activity</h2>
             <button
               onClick={() => navigate("/api-testing/logs")}
-              className="font-['Montserrat',sans-serif] text-[12px] lg:text-[13px] text-[#A02724] hover:underline font-medium"
+              className="font-['Montserrat',sans-serif] text-[12px] lg:text-[13px] text-[#4b1b91] hover:underline font-medium"
             >
               View all
             </button>

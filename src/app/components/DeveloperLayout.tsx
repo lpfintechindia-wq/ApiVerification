@@ -38,7 +38,7 @@ export default function DeveloperLayout() {
           {sidebarOpen ? (
             <>
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-[#A02724] rounded-lg flex items-center justify-center shadow-md">
+                <div className="w-8 h-8 bg-[#4b1b91] rounded-lg flex items-center justify-center shadow-md">
                   <Code2 className="w-5 h-5 text-white" />
                 </div>
                 <div>
@@ -79,16 +79,14 @@ export default function DeveloperLayout() {
                   onClick={() => navigate(item.path)}
                   className={`font-['Montserrat',sans-serif] w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all ${
                     item.active
-                      ? "bg-[#FEE2E2] text-[#A02724] border border-[#A02724]/20 shadow-sm"
+                      ? "bg-[#f3e8ff] text-[#4b1b91] border border-[#4b1b91]/20 shadow-sm"
                       : "text-[#64748b] hover:bg-[#f8fafc] hover:text-[#0f172a]"
                   }`}
                 >
                   <Icon className="w-5 h-5 shrink-0" />
-                  {sidebarOpen && (
-                    <span className="text-[14px] font-medium">{item.name}</span>
-                  )}
-                  {item.active && sidebarOpen && (
-                    <div className="ml-auto w-1.5 h-1.5 rounded-full bg-[#A02724]"></div>
+                  <span className="text-[14px] font-medium">{item.name}</span>
+                  {item.active && (
+                    <div className="ml-auto w-1.5 h-1.5 rounded-full bg-[#4b1b91]"></div>
                   )}
                 </button>
               );
@@ -126,7 +124,7 @@ export default function DeveloperLayout() {
             {/* Logo & Close */}
             <div className="h-16 flex items-center justify-between px-4 border-b border-[#e2e8f0]">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-[#A02724] rounded-lg flex items-center justify-center shadow-md">
+                <div className="w-8 h-8 bg-[#4b1b91] rounded-lg flex items-center justify-center shadow-md">
                   <Code2 className="w-5 h-5 text-white" />
                 </div>
                 <div>
@@ -147,7 +145,7 @@ export default function DeveloperLayout() {
               <label className="font-['Montserrat',sans-serif] text-[11px] text-[#64748b] mb-2 block uppercase tracking-wide font-medium">
                 Environment
               </label>
-              <select className="font-['Montserrat',sans-serif] w-full bg-[#f8fafc] border border-[#e2e8f0] rounded-lg px-3 py-2 text-[13px] text-[#0f172a] focus:outline-none focus:border-[#A02724] focus:ring-2 focus:ring-[#A02724]/20">
+              <select className="font-['Montserrat',sans-serif] w-full bg-[#f8fafc] border border-[#e2e8f0] rounded-lg px-3 py-2 text-[13px] text-[#0f172a] focus:outline-none focus:border-[#4b1b91] focus:ring-2 focus:ring-[#4b1b91]/20">
                 <option>🟢 Sandbox</option>
                 <option>🔴 Production (Read-only)</option>
               </select>
@@ -167,14 +165,14 @@ export default function DeveloperLayout() {
                       }}
                       className={`font-['Montserrat',sans-serif] w-full flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all ${
                         item.active
-                          ? "bg-[#FEE2E2] text-[#A02724] border border-[#A02724]/20 shadow-sm"
+                          ? "bg-[#f3e8ff] text-[#4b1b91] border border-[#4b1b91]/20 shadow-sm"
                           : "text-[#64748b] hover:bg-[#f8fafc] hover:text-[#0f172a]"
                       }`}
                     >
                       <Icon className="w-5 h-5 shrink-0" />
                       <span className="text-[14px] font-medium">{item.name}</span>
                       {item.active && (
-                        <div className="ml-auto w-1.5 h-1.5 rounded-full bg-[#A02724]"></div>
+                        <div className="ml-auto w-1.5 h-1.5 rounded-full bg-[#4b1b91]"></div>
                       )}
                     </button>
                   );
@@ -228,7 +226,7 @@ export default function DeveloperLayout() {
               <input
                 type="text"
                 placeholder="Search APIs..."
-                className="font-['Montserrat',sans-serif] w-48 lg:w-64 bg-[#f8fafc] border border-[#e2e8f0] rounded-lg pl-10 pr-4 py-2 text-[13px] text-[#0f172a] placeholder:text-[#64748b] focus:outline-none focus:border-[#A02724] focus:ring-2 focus:ring-[#A02724]/20"
+                className="font-['Montserrat',sans-serif] w-48 lg:w-64 bg-[#f8fafc] border border-[#e2e8f0] rounded-lg pl-10 pr-4 py-2 text-[13px] text-[#0f172a] placeholder:text-[#64748b] focus:outline-none focus:border-[#4b1b91] focus:ring-2 focus:ring-[#4b1b91]/20"
               />
             </div>
 
@@ -247,7 +245,7 @@ export default function DeveloperLayout() {
                 <p className="font-['Montserrat',sans-serif] text-[13px] font-medium text-[#0f172a]">Admin User</p>
                 <p className="font-['Montserrat',sans-serif] text-[11px] text-[#64748b]">Super Admin</p>
               </div>
-              <div className="w-8 h-8 lg:w-9 lg:h-9 bg-[#A02724] rounded-full flex items-center justify-center text-[13px] lg:text-[14px] font-bold text-white shadow-md">
+              <div className="w-8 h-8 lg:w-9 lg:h-9 bg-[#4b1b91] rounded-full flex items-center justify-center text-[13px] lg:text-[14px] font-bold text-white shadow-md">
                 A
               </div>
             </div>

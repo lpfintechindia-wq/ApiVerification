@@ -245,7 +245,7 @@ export default function VerificationApiList() {
                       e.stopPropagation();
                       navigate(`/verification-apis/${category}/${api.id}`);
                     }}
-                    className="px-4 py-2 bg-[#3b82f6] text-white rounded-lg text-[13px] font-medium hover:bg-[#2563eb] transition-colors shadow-sm"
+                    className="px-4 py-2 bg-[#4b1b91] text-white rounded-lg text-[13px] font-medium hover:bg-[#170d3f] transition-colors shadow-sm"
                   >
                     Test API
                   </button>

@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 
 function Frame() {
   return (
-    <div className="-translate-x-1/2 absolute bg-[#A02724] h-[40px] left-1/2 overflow-clip rounded-[8px] top-[46px] w-[116px] shadow-md">
+    <div className="-translate-x-1/2 absolute bg-[#4b1b91] h-[40px] left-1/2 overflow-clip rounded-[8px] top-[46px] w-[116px] shadow-md">
       <p className="absolute font-['Montserrat',sans-serif] font-bold leading-[normal] left-[calc(50%-30.5px)] text-white text-[16px] top-[calc(50%-10px)]">PAYTECH</p>
     </div>
   );
@@ -34,7 +34,7 @@ function DashboardTab({ isActive, onClick }: { isActive: boolean; onClick: () =>
     <div 
       onClick={onClick}
       className={`content-stretch flex gap-[12px] items-center px-[24px] py-[12px] relative shrink-0 w-full cursor-pointer transition-all ${
-        isActive ? "bg-[#A02724] text-white" : "text-[#94A3B8] hover:bg-[#1E293B] hover:text-white"
+        isActive ? "bg-[#4b1b91] text-white" : "text-[#94A3B8] hover:bg-[#1E293B] hover:text-white"
       }`} 
       data-name="Dashboard tab"
     >
@@ -211,7 +211,7 @@ function DeveloperToolsTab({ activeRoute, onNavigate }: { activeRoute: string; o
     <div className="relative shrink-0 w-full">
       <div 
         className={`h-[48px] relative shrink-0 w-full cursor-pointer transition-all ${
-          isActive ? "bg-[#A02724] text-white" : "text-[#94A3B8] hover:bg-[#1E293B] hover:text-white"
+          isActive ? "bg-[#4b1b91] text-white" : "text-[#94A3B8] hover:bg-[#1E293B] hover:text-white"
         }`}
         onClick={() => onNavigate("/developer")}
       >
@@ -301,8 +301,8 @@ function Search1() {
     <div className="relative shrink-0 size-[15.273px]" data-name="search">
       <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15.2727 15.2727">
         <g id="search">
-          <path d={svgPaths.p1a5e7700} id="Vector" stroke="var(--stroke-0, #A02724)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.27273" />
-          <path d={svgPaths.p19baff6f} id="Vector_2" stroke="var(--stroke-0, #A02724)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.27273" />
+          <path d={svgPaths.p1a5e7700} id="Vector" stroke="var(--stroke-0, #4b1b91)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.27273" />
+          <path d={svgPaths.p19baff6f} id="Vector_2" stroke="var(--stroke-0, #4b1b91)" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.27273" />
         </g>
       </svg>
     </div>
@@ -370,7 +370,7 @@ function TopNavBar({ title, onMenuClick }: { title: string; onMenuClick: () => v
           <div className="flex items-center gap-3">
             <button
               onClick={onMenuClick}
-              className="lg:hidden text-[#0F172A] hover:text-[#A02724] transition-colors"
+              className="lg:hidden text-[#0F172A] hover:text-[#4b1b91] transition-colors"
               aria-label="Open menu"
             >
               <Menu className="size-6" />
